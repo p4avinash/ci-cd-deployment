@@ -4,6 +4,7 @@ const num2 = 20
 const num3 = 30
 const num4 = 40
 const num5 = 50
+const num6 = 344
 
 // Function that takes 5 arguments
 function analyzeNumbers(a, b, c, d, e) {
@@ -35,6 +36,8 @@ function analyzeNumbers(a, b, c, d, e) {
 
 // Store the returned value
 const result = analyzeNumbers(num1, num2, num3, num4, num5)
+console.log(result)
+console.log(result)
 console.log(result)
 console.log(result)
 console.log(result)
