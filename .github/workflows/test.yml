@@ -1,0 +1,22 @@
+name: Building and Deploying
+
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Node
+
+        uses: actions/setup-node@v4
+
+        with:
+          node-version: 22
+
+      - run: npm install
+
+      - run: npm run build
