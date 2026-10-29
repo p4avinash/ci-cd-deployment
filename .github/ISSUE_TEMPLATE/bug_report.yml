@@ -1,0 +1,50 @@
+name: Bug Report
+description: Report a bug or unexpected behavior
+title: "[BUG]: "
+labels: ["bug"]
+
+body:
+  - type: textarea
+    attributes:
+      label: Bug Description
+      description: Clearly explain the issue.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Steps to Reproduce
+      description: Provide steps to reproduce the issue.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Expected Behavior
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Actual Behavior
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - Critical
+        - High
+        - Medium
+        - Low
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Screenshots / Logs
+      description: Attach relevant evidence.
+    validations:
+      required: false

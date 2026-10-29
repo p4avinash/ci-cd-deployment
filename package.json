@@ -5,17 +5,30 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
-    "test": "node index.js",
+    "format": "prettier --write .",
+    "type-check": "tsc --noEmit",
+    "test": "echo \"No tests configured yet\"",
     "build": "echo \"Build Successful 🚀\"",
     "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ],
+    "*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ]
   },
   "dependencies": {
     "chalk": "^5.3.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^21.2.4",
+    "@commitlint/config-conventional": "^21.2.4",
     "@eslint/js": "^9.39.5",
     "eslint": "^9.39.5",
     "globals": "^17.8.0",
-    "husky": "^9.1.7"
+    "husky": "^9.1.7",
+    "lint-staged": "^17.6.0"
   }
 }
